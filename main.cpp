@@ -1,7 +1,11 @@
 // NuMaker-PFM-NUC472 use ADC0 (A0/PE_1) to read gas sensor (MQ-3)
 #include "mbed.h"
-
+#if defined(TARGET_NUMAKER_PFM_NUC472)
 AnalogIn   adc0(PE_1); // A0 connected to MQ-3 gas sensor
+#elif defined(TARGET_NUMAKER_PFM_M453)
+AnalogIn   adc0(PB_0);
+#endif
+
 DigitalOut led(LED1);
 
 int main(void)
