@@ -4,6 +4,8 @@
 AnalogIn   adc0(PE_1); // A0 connected to MQ-3 gas sensor
 #elif defined(TARGET_NUMAKER_PFM_M453)
 AnalogIn   adc0(PB_0);
+#elif defined(TARGET_NUMAKER_PFM_M487)
+AnalogIn   adc0(PB_6);
 #endif
 
 DigitalOut led(LED1);
